@@ -37,7 +37,7 @@ public LineChart( String applicationTitle, String chartTitle, ArrayList<Integer>
     {
       super(applicationTitle);
       JFreeChart xylineChart = ChartFactory.createXYLineChart(
-         chartTitle , "Number of Steps (t)" , "Number of Edges" , createDataset(X,Y,label) , PlotOrientation.VERTICAL , true , true , false);
+         chartTitle , "Number of Steps (t)" , "Number of Nodes/Edges" , createDataset(X,Y,label) , PlotOrientation.VERTICAL , true , true , false);
          
       ChartPanel chartPanel = new ChartPanel( xylineChart );
       chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
