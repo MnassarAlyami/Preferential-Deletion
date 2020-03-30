@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package preferentialdeletion;
+
+import java.awt.Color;
+import java.util.ArrayList;
+import java.awt.BasicStroke; 
+
+import org.jfree.chart.ChartPanel; 
+import org.jfree.chart.JFreeChart; 
+import org.jfree.data.xy.XYDataset; 
+import org.jfree.data.xy.XYSeries; 
+import org.jfree.ui.ApplicationFrame; 
+import org.jfree.chart.plot.XYPlot; 
+import org.jfree.chart.ChartFactory; 
+import org.jfree.chart.plot.PlotOrientation; 
+import org.jfree.data.xy.XYSeriesCollection; 
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+/**
+ *
+ * @author Mnassar Alyami
+ */
+public class LineChart extends ApplicationFrame {
+
+public LineChart( String applicationTitle, String chartTitle, ArrayList<Integer> X, ArrayList<Integer> Y, String label )
+    {
+      super(applicationTitle);
+      JFreeChart xylineChart = ChartFactory.createXYLineChart(
+         chartTitle , "Number of Steps (t)" , "Number of Edges" , createDataset(X,Y,label) , PlotOrientation.VERTICAL , true , true , false);
+         
+      ChartPanel chartPanel = new ChartPanel( xylineChart );
+      chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+      final XYPlot plot = xylineChart.getXYPlot( );
+      
+      XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
+      renderer.setSeriesPaint( 0 , Color.RED );
+      renderer.setSeriesStroke( 0 , new BasicStroke( 0.5f ) );
+      plot.setRenderer( renderer ); 
+      setContentPane( chartPanel ); 
+   }
+
+   
+   private XYDataset createDataset(ArrayList<Integer> X, ArrayList<Integer> Y, String label) 
+   {
+      final XYSeries data = new XYSeries(label );          
+      for(int i = 0 ; i < X.size() ; i++) 
+      {
+    	  data.add(X.get(i),Y.get(i));
+      }
+      final XYSeriesCollection dataset = new XYSeriesCollection( );          
+      dataset.addSeries( data );          
+      return dataset;
+   }
+}
+
