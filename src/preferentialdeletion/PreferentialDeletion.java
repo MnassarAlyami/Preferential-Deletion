@@ -10,10 +10,22 @@ import org.jfree.ui.RefineryUtilities;
 
 import java.util.*;
 
-/**
- *
- * @author Mnassar Alyami
- */
+/***************************************************************
+@author Mnassar Alyami
+Implementation as described in the paper:
+Link: https://www.sciencedirect.com/science/article/pii/S0020019006003632
+
+Basic mathematical formulas not presented in the paper and the logical construction of random graph are inferred from previous implementations:
+Helena Julie Arpudaraj (2018): https://github.com/HelenaJulie/-Preferential-deletion-in-dynamic-models-of-web-like-networks-implementation/blob/master/AlgoAssignment2.py
+[Commit 6b447b3e5d5172b11e4028718a03f4da211f3b71]
+Prashanth Kandhuri (2018): https://github.com/prashanth41/Preferential-Deletion/blob/master/preferential%20deletion.py 
+[Commit 56f03c18bdfb247229a7e75dd3c668c6c70012af]
+
+For graph plotting, it is required to add two required jar files into the project:
+Jcommon
+Jfreechart
+***************************************************************/
+
 public class PreferentialDeletion {
 
     /**
