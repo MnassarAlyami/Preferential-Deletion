@@ -20,12 +20,7 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection; 
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+//Standard Class for Plotting, It follows a demo of XY series at https://stackoverflow.com/questions/16714738/xy-plotting-with-java
 
 /**
  *
