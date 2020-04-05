@@ -15,7 +15,7 @@ import java.util.*;
 Implementation as described in the paper:
 Link: https://www.sciencedirect.com/science/article/pii/S0020019006003632
 
-Basic mathematical formulas not presented in the paper and the logical construction of random graph are inferred from previous implementations:
+Basic mathematical formulas that are not presented in the paper and the logical construction of random graph are inferred from previous implementations:
 Helena Julie Arpudaraj (2018): https://github.com/HelenaJulie/-Preferential-deletion-in-dynamic-models-of-web-like-networks-implementation/blob/master/AlgoAssignment2.py
 [Commit 6b447b3e5d5172b11e4028718a03f4da211f3b71]
 Prashanth Kandhuri (2018): https://github.com/prashanth41/Preferential-Deletion/blob/master/preferential%20deletion.py 
@@ -60,7 +60,7 @@ public class PreferentialDeletion {
 			Cum_BProb=Cum_BProb+BProb.get(k);
 			CBProb.add(Cum_BProb);
 		}
-		double y=rand.nextInt(11);
+		double y=rand.nextInt(10);
 		y=y/10;
 		
                 for(int k = 0; k < len(CBProb) ; k++){
@@ -158,7 +158,7 @@ public class PreferentialDeletion {
             ArrayList<Integer> numOfEdges= new ArrayList<>();
 		
 		for(int j = startSteps ; j < maxSteps ; j++){
-			double x=rand.nextInt(11);
+			double x=rand.nextInt(10);
 			x=x/10;
                         //p=0.6
 			if(x <= 0.6){
@@ -193,7 +193,7 @@ public class PreferentialDeletion {
             ArrayList<Integer> numOfEdges2= new ArrayList<>();		
 		
 		for(int j = startSteps ; j < maxSteps ; j++){
-			double x=rand.nextInt(11);
+			double x=rand.nextInt(10);
 			x=x/10;
                         //p=0.75
 			if(x <= 0.75){
@@ -228,7 +228,7 @@ public class PreferentialDeletion {
             ArrayList<Integer> numOfEdges3= new ArrayList<>();
 		
 		for(int j = startSteps ; j < maxSteps ; j++){
-			double x=rand.nextInt(11);
+			double x=rand.nextInt(10);
 			x=x/10;
                         //p=0.9
 			if(x <= 0.9){
